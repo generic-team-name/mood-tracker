@@ -1,10 +1,19 @@
 import React from 'react';
 import { Form as Fo, ButtonGroup, ToggleButton, Button } from 'react-bootstrap';
 
-SubmitHandler(event)
+class SubmitForm extends React.Component {
+    constructor(props) {
 
+    }
 
-ChangeHandler(event)
+    handleChange(event) {
+        this.setState({value: event.target.value})
+    }
+
+    handleSubmit(event) {
+
+    }
+}
 
 export const Form = () => (
     <Fo onSubmit={SubmitHandler}>
@@ -20,7 +29,7 @@ export const Form = () => (
         <br />
         <Fo.Row>
             <Fo.Label>Write about your day.</Fo.Label>
-            <Fo.Control as="textarea" rows="3" onChange={ChangeHandler}/>
+            <Fo.Control as="textarea" rows="3" onChange={ChangeHandler} />
         </Fo.Row>
         <br />
         <Fo.Row>
