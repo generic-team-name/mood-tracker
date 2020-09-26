@@ -3,8 +3,8 @@ class Values {
         var fullArray = []
     }
 
-    addStuff(entry, mood, date) {
-        fullArray.push([entry, mood, date])
+    addStuff(date, mood, entry) {
+        fullArray.push([date, mood, entry])
     }
 
     getStuff() {
