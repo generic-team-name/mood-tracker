@@ -1,10 +1,15 @@
 import React from 'react';
 import { Form as Fo, ButtonGroup, ToggleButton, Button } from 'react-bootstrap';
 
+SubmitHandler(event)
+
+
+ChangeHandler(event)
+
 export const Form = () => (
-    <Fo>
+    <Fo onSubmit={SubmitHandler}>
         <Fo.Row>
-            <ButtonGroup toggle size="md">
+            <ButtonGroup toggle size="md" onChange={ChangeHandler}>
                 <ToggleButton type="radio" value="1" variant="success">Great</ToggleButton>
                 <ToggleButton type="radio" value="2" variant="primary">Good</ToggleButton>
                 <ToggleButton type="radio" value="3" variant="info">Okay</ToggleButton>
@@ -15,7 +20,7 @@ export const Form = () => (
         <br />
         <Fo.Row>
             <Fo.Label>Write about your day.</Fo.Label>
-            <Fo.Control as="textarea" rows="3" />
+            <Fo.Control as="textarea" rows="3" onChange={ChangeHandler}/>
         </Fo.Row>
         <br />
         <Fo.Row>

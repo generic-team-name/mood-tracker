@@ -1,6 +1,6 @@
 class Values {
     constructor() {
-        var fullArray = []
+        var fullArray = [null]
     }
 
     addStuff(date, mood, entry) {
