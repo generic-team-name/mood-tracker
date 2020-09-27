@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). To open the project, create a React App and import all the files here. Then, in the same folder, install react-bootstrap, bootstrap, styled-components, react-router-dom, and recharts. Run yarn start, and the website will open in your browser.
 
 ## Available Scripts
 
