@@ -11,21 +11,23 @@ let bad = 0;
 let terrible = 0;
 
 var i;
-for (i = 0; i < array.length; i++) {
-    const a = array[i];
-    const mood = a[1];
-    if (mood === 'success') {
-        great++;
-    } else if (mood === 'primary') {
-        good++;
-    } else if (mood === 'info') {
-        okay++;
-    } else if (mood === 'warning') {
-        bad++;
-    } else if (mood === 'danger') {
-        terrible++;
+try {
+    for (i = 0; i < array.length; i++) {
+        const a = array[i];
+        const mood = a[1];
+        if (mood === 'success') {
+            great++;
+        } else if (mood === 'primary') {
+            good++;
+        } else if (mood === 'info') {
+            okay++;
+        } else if (mood === 'warning') {
+            bad++;
+        } else if (mood === 'danger') {
+            terrible++;
+        }
     }
-}
+} catch {}
 
 const data = [
     { name: 'Great', value: great },
