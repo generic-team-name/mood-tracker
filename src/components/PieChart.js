@@ -107,7 +107,7 @@ export default class Chart extends PureComponent {
                     activeIndex={this.state.activeIndex}
                     activeShape={renderActiveShape}
                     data={data}
-                    cx={270}
+                    cx={267}
                     cy={200}
                     innerRadius={100}
                     outerRadius={140}
