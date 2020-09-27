@@ -9,7 +9,7 @@ export default class SubmitForm extends Component {
             entry: ''
         };
         var array = [];
-        localStorage.setItem('array', array);
+        localStorage.setItem('array', JSON.stringify(array));
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
