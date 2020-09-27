@@ -12,7 +12,7 @@ export const Cards = () => {
                     return (
                         <Card bg={array[1]} text='white' style={{ width: '50rem' }}>
                             <Card.Body>
-                                <Card.Title>{monthNames[Date(parseInt(array[0])).prototype.getMonth] + " " + Date(array[0]).prototype.getDay}</Card.Title>
+                                <Card.Title>{Date(array[0]).toLocaleString({month: 'long', day: 'numeric', timeZone: 'false' })}</Card.Title>
                                 <Card.Text>
                                     {array[2]}
                                 </Card.Text>
