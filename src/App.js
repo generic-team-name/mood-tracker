@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Layout } from './components/Layout';
-import { SubmitForm } from './components/Form';
+import SubmitForm from './components/Form';
 
 class App extends Component {
   render() {
