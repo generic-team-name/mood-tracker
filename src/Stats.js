@@ -16,7 +16,7 @@ export const Stats = () => (
         <br />
         <h1>Statistics</h1>
         <br />
-        <div class="piechart">
+        <div className="piechart">
             <Chart />
         </div>
     </StyledDiv>
