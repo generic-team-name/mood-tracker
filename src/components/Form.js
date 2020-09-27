@@ -27,9 +27,11 @@ export default class SubmitForm extends Component {
         const entry = this.state.entry;
         alert('This was submitted: ' + mood + entry);
         event.preventDefault();
-        let a = [localStorage.getItem('array')]
+        let dirtyA = localStorage.getItem('array')
+        let a = JSON.parse(dirtyA);
         a.push([Date.now(), mood, entry]);
-        localStorage.setItem('array', a);
+        console.log(a);
+        localStorage.setItem('array', JSON.stringify(a));
     }
 
     render() {
