@@ -8,7 +8,7 @@ export default class SubmitForm extends Component {
             mood: '',
             entry: ''
         };
-        
+
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -27,7 +27,7 @@ export default class SubmitForm extends Component {
         event.preventDefault();
         let dirtyA = localStorage.getItem('array')
         let a = JSON.parse(dirtyA);
-        a.push([Date.now(), parseInt(mood), entry]);
+        a.unshift([Date.now(), parseInt(mood), entry]);
         console.log(a);
         localStorage.setItem('array', JSON.stringify(a));
     }

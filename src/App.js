@@ -12,10 +12,10 @@ class App extends Component {
           <br />
           <h1>How are you today?</h1>
           <Container fluid>
-          <SubmitForm />
+            <SubmitForm />
           </Container>
           <Container fluid>
-          <History />
+            <History />
           </Container>
         </Layout>
       </React.Fragment>
