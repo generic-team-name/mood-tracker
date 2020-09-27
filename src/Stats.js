@@ -13,10 +13,11 @@ const CenterDiv = styled.div`
 
 export const Stats = () => (
     <StyledDiv>
-        < br />
+        <br />
         <h1>Statistics</h1>
-        <CenterDiv>
+        <br />
+        <div class="piechart">
             <Chart />
-        </CenterDiv>
+        </div>
     </StyledDiv>
 )
