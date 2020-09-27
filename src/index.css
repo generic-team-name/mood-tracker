@@ -14,5 +14,5 @@ code {
 
 .scrollable {
   overflow-y: scroll;
-  height: 320px;
+  height: 300px;
 }

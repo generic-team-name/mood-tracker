@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap'
 import { Layout } from './components/Layout';
-import SubmitForm from './components/Form';
-import History from './components/History';
-
+import { Home } from './Home';
+import { Stats } from './Stats';
+import { NotFound } from './NotFound';
+import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { NavigationBar } from './components/Navbar';
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Layout>
-          <br />
-          <h1>How are you today?</h1>
-          <Container fluid>
-            <SubmitForm />
-          </Container>
-          <Container fluid>
-          <br />
-                <br />
-                <br />
-                <h2>Your History</h2>
-            <History />
-          </Container>
-        </Layout>
+        <Router>
+          <NavigationBar />
+          <Sidebar />
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/stats" component={Stats} />
+              <Route component={NotFound} />
+            </Switch>
+          </Layout>
+        </Router>
       </React.Fragment>
     )
   }

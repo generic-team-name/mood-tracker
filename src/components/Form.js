@@ -49,11 +49,10 @@ export default class SubmitForm extends Component {
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="warning" variant="warning" onChange={this.handleChange}><img alt='Bad' src='../assets/png/bad.png'/></ToggleButton>
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="danger" variant="danger" onChange={this.handleChange}><img alt='Terrible' src='../assets/png/terrible.png'/></ToggleButton>
                     </ToggleButtonGroup>
-                    <h6>Icons made by <a href="https://www.flaticon.local/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.local/" title="Flaticon">www.flaticon.local</a></h6>
+                    <p>Icons made by <a href="https://www.flaticon.local/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.local/" title="Flaticon">www.flaticon.local</a></p>
                 </Fo.Row>
-                <br />
                 <Fo.Row>
-                    <Fo.Label>Write about your day.</Fo.Label>
+                    <Fo.Label as="h6">Write about your day.</Fo.Label>
                 </Fo.Row>
                 <Fo.Row>
                     <Fo.Control style={{ width: '50rem' }} name="entry" value={this.state.value} as="textarea" rows="3" onChange={this.handleChange} />
