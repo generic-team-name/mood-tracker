@@ -3,7 +3,7 @@ class Values {
     }
 
     addStuff(date, mood, entry) {
-        fullArray.push([date, mood, entry])
+        fullArray.push([Date.now(), mood, entry])
     }
 
     getStuff() {
