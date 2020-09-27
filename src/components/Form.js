@@ -5,7 +5,7 @@ export default class SubmitForm extends Component {
     constructor() {
         super();
         this.state = {
-            mood: '',
+            mood: 'info',
             entry: ''
         };
         try { const test = JSON.parse(localStorage.getItem('array'));
@@ -45,7 +45,7 @@ export default class SubmitForm extends Component {
                     <ToggleButtonGroup exclusive="true" name="mood" toggle size="lg">
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="success" variant="success" onChange={this.handleChange}><img alt='Great' src='../assets/png/great.png'/></ToggleButton>
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="primary" variant="primary" onChange={this.handleChange}><img alt='Good' src='../assets/png/good.png'/></ToggleButton>
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="info" variant="info" onChange={this.handleChange}><img alt='Okay' src='../assets/png/okay.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '10rem' }} type="radio" value="info" variant="info" onChange={this.handleChange} selected><img alt='Okay' src='../assets/png/okay.png'/></ToggleButton>
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="warning" variant="warning" onChange={this.handleChange}><img alt='Bad' src='../assets/png/bad.png'/></ToggleButton>
                         <ToggleButton style={{ width: '10rem' }} type="radio" value="danger" variant="danger" onChange={this.handleChange}><img alt='Terrible' src='../assets/png/terrible.png'/></ToggleButton>
                     </ToggleButtonGroup>
