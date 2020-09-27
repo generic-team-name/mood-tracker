@@ -9,9 +9,12 @@ export default class SubmitForm extends Component {
             entry: ''
         };
         try { const test = JSON.parse(localStorage.getItem('array'));
+        test.push('');
+        test.pop('');
         } catch {
             let array = [];
             localStorage.setItem('array', JSON.stringify(array));
+            console.log('reset');
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,6 +35,7 @@ export default class SubmitForm extends Component {
         a.unshift([Date.now(), mood, entry]);
         console.log(a);
         localStorage.setItem('array', JSON.stringify(a));
+        window.location.reload();
     }
 
     render() {
