@@ -15,6 +15,10 @@ class App extends Component {
             <SubmitForm />
           </Container>
           <Container fluid>
+          <br />
+                <br />
+                <br />
+                <h2>Your History</h2>
             <History />
           </Container>
         </Layout>

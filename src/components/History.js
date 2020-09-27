@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Cards } from './Cards';
 
 export default class History extends Component {
     constructor() {
@@ -8,10 +9,8 @@ export default class History extends Component {
     render() {
         return (
             <React.Fragment>
-                <br />
-                <br />
-                <br />
-                <h2>Your History</h2>
+                
+                <Cards />
             </React.Fragment>
         )
     }
