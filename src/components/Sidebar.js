@@ -8,10 +8,11 @@ const StyledSideNav = styled.div`
     height: 100%;
     width: 90px;
     z-index: 1;
-    top: 5rem;
+    top: 8rem;
     background-color: #222;
     overflox-x: hidden;
     padding-top: 5rem;
+    left: 0;
     `;
 
 const StyledImg = styled.img`

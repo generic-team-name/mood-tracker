@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { Form as Fo, ToggleButtonGroup, ToggleButton, Button } from 'react-bootstrap';
+import styled from 'styled-components';
+
+const StyledImg = styled.img`
+    width: 4rem;
+`;
 
 export default class SubmitForm extends Component {
     constructor() {
@@ -43,12 +48,14 @@ export default class SubmitForm extends Component {
             <Fo onSubmit={this.handleSubmit}>
                 <Fo.Row>
                     <ToggleButtonGroup exclusive="true" name="mood" toggle size="lg">
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="success" variant="success" onChange={this.handleChange}><img alt='Great' src='../assets/png/great.png'/></ToggleButton>
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="primary" variant="primary" onChange={this.handleChange}><img alt='Good' src='../assets/png/good.png'/></ToggleButton>
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="info" variant="info" onChange={this.handleChange} selected><img alt='Okay' src='../assets/png/okay.png'/></ToggleButton>
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="warning" variant="warning" onChange={this.handleChange}><img alt='Bad' src='../assets/png/bad.png'/></ToggleButton>
-                        <ToggleButton style={{ width: '10rem' }} type="radio" value="danger" variant="danger" onChange={this.handleChange}><img alt='Terrible' src='../assets/png/terrible.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '6rem' }} type="radio" value="success" variant="success" onChange={this.handleChange}><StyledImg alt='Great' src='../assets/png/great.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '6rem' }} type="radio" value="primary" variant="primary" onChange={this.handleChange}><StyledImg alt='Good' src='../assets/png/good.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '6rem' }} type="radio" value="info" variant="info" onChange={this.handleChange} selected><StyledImg alt='Okay' src='../assets/png/okay.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '6rem' }} type="radio" value="warning" variant="warning" onChange={this.handleChange}><StyledImg alt='Bad' src='../assets/png/bad.png'/></ToggleButton>
+                        <ToggleButton style={{ width: '6rem' }} type="radio" value="danger" variant="danger" onChange={this.handleChange}><StyledImg alt='Terrible' src='../assets/png/terrible.png'/></ToggleButton>
                     </ToggleButtonGroup>
+                </Fo.Row>
+                <Fo.Row>
                     <p>Icons made by <a href="https://www.flaticon.local/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.local/" title="Flaticon">www.flaticon.local</a></p>
                 </Fo.Row>
                 <Fo.Row>

@@ -5,13 +5,13 @@ import { Stats } from './Stats';
 import { NotFound } from './NotFound';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { NavigationBar } from './components/Navbar';
+import { Jumbotron } from './components/Jumbotron';
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <Router>
-          <NavigationBar />
+          <Jumbotron />
           <Sidebar />
           <Layout>
             <Switch>
