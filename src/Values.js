@@ -1,12 +1,16 @@
-class Values {
+export default class Values {
     constructor() {
+        this.state = {
+            fullArray: []
+        };
     }
 
-    addStuff(date, mood, entry) {
-        fullArray.push([Date.now(), mood, entry])
+    addStuff(mood, entry) {
+        const array = this.state.fullArray;
+        array.push([Date.now(), mood, entry])
     }
 
     getStuff() {
-        return fullArray
+        return this.state.fullArray
     }
 }

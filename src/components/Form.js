@@ -17,11 +17,11 @@ export default class SubmitForm extends Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        this.setState({ [name]: value })
+        this.setState({ [name]: value });
     }
 
     handleSubmit(event) {
-        alert('This was submitted: ' + this.state.mood + this.state.entry + this.state.date);
+        alert('This was submitted: ' + this.state.mood + this.state.entry);
         event.preventDefault();
     }
 
@@ -29,12 +29,12 @@ export default class SubmitForm extends Component {
         return (
             <Fo onSubmit={this.handleSubmit}>
                 <Fo.Row>
-                    <ToggleButtonGroup name="mood-selected" toggle size="md" onChange={this.handleChange}>
-                        <ToggleButton name="mood-select" type="radio" value="1" variant="success">Great</ToggleButton>
-                        <ToggleButton name="mood-select" type="radio" value="2" variant="primary">Good</ToggleButton>
-                        <ToggleButton name="mood-select" selected type="radio" value="3" variant="info">Okay</ToggleButton>
-                        <ToggleButton name="mood-select" type="radio" value="4" variant="warning">Bad</ToggleButton>
-                        <ToggleButton name="mood-select" type="radio" value="5" variant="danger">Terrible</ToggleButton>
+                    <ToggleButtonGroup exclusive="true" name="mood" toggle size="md">
+                        <ToggleButton type="radio" value="5" variant="success" onChange={this.handleChange}>Great</ToggleButton>
+                        <ToggleButton type="radio" value="4" variant="primary" onChange={this.handleChange}>Good</ToggleButton>
+                        <ToggleButton type="radio" value="3" variant="info" onChange={this.handleChange}>Okay</ToggleButton>
+                        <ToggleButton type="radio" value="2" variant="warning" onChange={this.handleChange}>Bad</ToggleButton>
+                        <ToggleButton type="radio" value="1" variant="danger" onChange={this.handleChange}>Terrible</ToggleButton>
                     </ToggleButtonGroup>
                 </Fo.Row>
                 <br />
