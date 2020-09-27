@@ -8,9 +8,7 @@ export default class SubmitForm extends Component {
             mood: '',
             entry: ''
         };
-        var array = [];
-        localStorage.setItem('array', JSON.stringify(array));
-
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,7 +27,7 @@ export default class SubmitForm extends Component {
         event.preventDefault();
         let dirtyA = localStorage.getItem('array')
         let a = JSON.parse(dirtyA);
-        a.push([Date.now(), mood, entry]);
+        a.push([Date.now(), parseInt(mood), entry]);
         console.log(a);
         localStorage.setItem('array', JSON.stringify(a));
     }
