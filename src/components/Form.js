@@ -8,6 +8,8 @@ export default class SubmitForm extends Component {
             mood: '',
             entry: ''
         };
+        var array = [];
+        localStorage.setItem('array', array);
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,8 +23,13 @@ export default class SubmitForm extends Component {
     }
 
     handleSubmit(event) {
-        alert('This was submitted: ' + this.state.mood + this.state.entry);
+        const mood = this.state.mood;
+        const entry = this.state.entry;
+        alert('This was submitted: ' + mood + entry);
         event.preventDefault();
+        let a = localStorage.getItem('array')
+        a.push([Date.now(), mood, entry]);
+        localStorage.setItem('array', a);
     }
 
     render() {
